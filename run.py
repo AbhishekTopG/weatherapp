@@ -3,6 +3,8 @@ from flask import Flask,request,render_template
 import SECRETS
 import webbrowser
 # webbrowser.open('http://127.0.0.1:5000')
+import datetime
+
 
 
 app =Flask(__name__)
@@ -21,13 +23,24 @@ def test():
             max = s['temp_max']
             hum = s['humidity']
             m = d['main'].upper()
-            des= d['description'].upper()
+            des= d['description'].upper() 
             icon = d['icon']
+            Feels_like = s['feels_like']
+            pressure = s['pressure']
+            country = r.json()['sys']['country']
+            city = r.json()['name']
+            wind_speed = r.json()['wind']['speed']
+            wind_deg = r.json()['wind']['deg']
+            datetime = datetime.datetime.now()
+            sunrise = datetime.datetime.fromtimestamp(int(r.json()['sys']['sunrise'])).strftime('%Y-%m-%d %H:%M:%S')
+            sunset = datetime.datetime.fromtimestamp(int(r.json()['sys']['sunset'])).strftime('%Y-%m-%d %H:%M:%S')
+            
+
         print(r.json())
         # return r.json()#,str(temp)
-        return render_template('dump.html',vars=vars)#temp=temp,min=min,max=max,hum=hum)
+        return render_template('weatherapp2.html',vars=vars)#temp=temp,min=min,max=max,hum=hum)
     
-    return render_template('base.html')
+    return render_template('weatherapp1.html')
 
 
 if __name__ == '__main__':
