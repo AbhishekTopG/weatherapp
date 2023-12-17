@@ -16,9 +16,11 @@ body{
     height: 100%;
     width: 100%;
     margin:auto;
+    
 }
 
 .weather__header {
+    font-size: larger;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,6 +51,8 @@ input::placeholder {
     color: #fff;
 }
 
+
+
 .weather__units span {
     cursor: pointer;
 }
@@ -59,33 +63,34 @@ input::placeholder {
 
 .weather__body {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 3rem;
     margin-bottom: 250px;
 }
 
 .weather__datetime {
-    margin-bottom: 2rem;
-    font-size: 14px;
+    margin-top:  0.5rem; ;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
 }
 
-.weather__forecast {
+.weather__temperature {
     background: #8FD7C7;
     display: inline-block;
+    font-size: 25px;
     padding: 0.5rem 1rem;
     border-radius: 30px;
 }
 
 .weather__icon img {
-    width: 100px;
+    margin: 0.5rem;
+    height:50px
 }
 
-.weather__temperature {
-    font-size: 1.75rem;
-}
 
 .weather__minmax {
     display: flex;
     justify-content: center;
+    
 }
 
 .weather__minmax p {
@@ -103,7 +108,7 @@ input::placeholder {
 .weather__card {
     display: flex;
     align-items: center;
-    background: #14ab8a;
+    background: #8FD7C7;
     height: 100px;
     padding: 1rem;
     border-radius: 10px;

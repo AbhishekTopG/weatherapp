@@ -2,67 +2,66 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/weatherapp2.css') }}">
-
     <title>Weather App Page 2</title>
     <!-- <link rel="stylesheet" href="weatherapp2.css"> -->
 </head>
 <body>
     <div class="container">
         <div class="weather__header">
-            <h1></h1>
+            <h1>Weather App</h1>
         </div>
         <div class="weather__body">
             <h1 class="weather__city"></h1>
-            <p>London,uk</p>
+            <p>CITY: {{vars.city}}</p><!--here-->
+            <div class="weather__temperature">
+                <p>TEMP : {{vars.temp}}</p><!--here-->
+            </div>
             <div class="weather__datetime">
+                <p>DATETIME: {{vars.datetime}}</p><!--here-->
             </div>
-            <div class="weather__forecast"></div>
-            <div class="weather__icon">
-            </div>
-            <p class="weather__temperature">
-            </p>
             <div class="weather__minmax">
-                <p>Min: 12&#176</p>
-                <p>Max: 16&#176</p>
+                <p>MIN : {{vars.min}}</p><!--here-->
+                <p>MAX : {{vars.max}}</p><!--here-->
             </div>
         </div>
+        <!--there was icon here-->
         <div class="icon">
             <img src = "https://openweathermap.org/img/wn/{{vars.icon}}@2x.png">
         </div>
         <div class="white-container">
             <div class="weather__info">
-                <div class="weather__card">
-                    <i class="fa-solid fa-temperature-full"></i>
-                    <div>
-                        <p>Feels like</p>
-                        <p class="weather__realfeel">18&#176</p>
-                    </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-temperature-full"></i>
+                <div>
+                    <p>Feels like</p>
+                    <p class="weather__realfeel">Feels_like:{{vars.Feels_like}}</p><!--here this is for feels like-->
                 </div>
-                <div class="weather__card">
-                    <i class="fa-solid fa-droplet"></i>
-                    <div>
-                        <p>Humidity</p>
-                        <p class="weather__humidity">18&#176</p>
-                    </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-droplet"></i>
+                <div>
+                    <p>Humidity</p>
+                    <p class="weather__humidity">HUM : {{vars.hum}}</p><!--here-->
                 </div>
-                <div class="weather__card">
-                    <i class="fa-solid fa-wind"></i>
-                    <div>
-                        <p>Wind</p>
-                        <p class="weather__wind">18&#176</p>
-                    </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-wind"></i>
+                <div>
+                    <p>Wind</p>
+                    <p class="weather__wind">WIND: {{vars.wind}}</p><!--here-->
                 </div>
-                <div class="weather__card">
-                    <i class="fa-solid fa-gauge-high"></i>
-                    <div>
-                        <p>Wind Angle</p>
-                        <p class="weather__pressure">18&#176</p>
-                    </div>
+            </div>
+            <div class="weather__card">
+                <i class="fa-solid fa-gauge-high"></i>
+                <div>
+                    <p>Pressure</p>
+                    <p class="weather__pressure">PRESSURE: {{vars.pressure}}</p><!--here-->
                 </div>
             </div>
         </div>
-        
+        </div>
     </div>
+    <!--this is for icons-->
     <script src="https://kit.fontawesome.com/a692e1c39f.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
