@@ -1,0 +1,50 @@
+
+<html>
+    <head><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='run.py'></head>
+    
+    <body style = "background-image: linear-gradient(to bottom, rgb(70, 69, 69),rgb(43, 43, 44))">
+        
+   
+        <h1 style = "font-family: VT323, monospace;
+        text-align: center;
+        font-size: 70px;
+        text-shadow: 4px 4px rgb(27, 27, 27);
+        color: rgb(255, 255, 255);
+         ">WEATHER<img src="C:Users/Adhesh/Desktop/projects/weather_app/templates/img/pngwing.com.png" alt="test"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></h1> 
+
+        <h1>{{temp}}</h1>
+        <div class="INPUT" style = "align-items: center;">
+        
+        <form action="{{ url_for("test")}}" method="post">
+        <label for="code" style = "font-family: VT323, monospace;
+        text-align: center;
+        align-items: center;
+        font-size: 35px;
+        text-shadow: 4px 4px rgb(27, 27, 27);
+        color: rgb(255, 255, 255);">ENTER LOCATION   </label>
+        <input type="text" id="code" name="code" placeholder="City,Country" style = "font-family: VT323, monospace;
+        text-align: center;
+        font-size: 35px;
+        align-items: center;
+        border-radius: 25px;
+  background: rgb(48, 48, 48);
+
+
+        
+        color: rgb(0, 0, 0);">
+        <button type="submit" style = "font-family: VT323, monospace;
+        text-align: center;
+        font-size: 35px;
+        border-radius: 25px;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        
+        color: rgb(0, 0, 0);">SUBMIT</button>
+        </form></div>
+      
+    </body>
+</html>

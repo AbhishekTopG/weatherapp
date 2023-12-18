@@ -1,31 +1,17 @@
 import requests
 from flask import Flask,request,render_template
-<<<<<<< HEAD
-<<<<<<< HEAD
 import SECRETS
 import webbrowser
 import datetime
-=======
-#import SECRETS
-import streamlit as st
-import os
-#import webbrowser
->>>>>>> dd372a5c7f2e84b3cff2864d7ba3c5047bd4d28f
 # webbrowser.open('http://127.0.0.1:5000')
-=======
-import os
->>>>>>> dc250bb1f464f68b46541b65759b8a7cb834cf49
-import datetime 
+
+
 app =Flask(__name__)
 @app.route('/',methods=["POST","GET"])
 def test():
     if request.method == "POST":
         code = request.form.get("code")
-<<<<<<< HEAD
         key='8d1bd93aaed0ae8a4cd881e3f917d243'
-=======
-        key= st.secrets['API_URL']
->>>>>>> dd372a5c7f2e84b3cff2864d7ba3c5047bd4d28f
         r = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={code}&appid={key}&units=metric")
         
         class vars:
@@ -60,6 +46,6 @@ def test():
 if __name__ == '__main__':
        
 
-       app.run(host='0.0.0.0')#debug='true')
+       app.run(debug='true')
 
        
