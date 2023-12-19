@@ -11,7 +11,11 @@ body{
   justify-content: center;
   min-height: 100vh;
   background: #43AFFC;
-}
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('bg3.png');
+  }
 
 .wrapper{
   width: 400px;
